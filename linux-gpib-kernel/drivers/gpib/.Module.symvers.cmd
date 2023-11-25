@@ -1,1 +1,0 @@
-cmd_/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/Module.symvers :=  scripts/mod/modpost -m -a     -o /tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/Module.symvers -T /tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/modules.order -i Module.symvers -e 

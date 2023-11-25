@@ -212,7 +212,7 @@ XSUBPP = "$(XSUBPPDIR)$(DFSEP)xsubpp"
 XSUBPPRUN = $(PERLRUN) $(XSUBPP)
 XSPROTOARG = 
 XSUBPPDEPS = /usr/share/perl/5.34/ExtUtils/typemap typemap /usr/share/perl/5.34/ExtUtils$(DFSEP)xsubpp
-XSUBPPARGS = -typemap '/usr/share/perl/5.34/ExtUtils/typemap' -typemap '/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user-4.3.6/language/perl/typemap'
+XSUBPPARGS = -typemap '/usr/share/perl/5.34/ExtUtils/typemap' -typemap '/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user/language/perl/typemap'
 XSUBPP_EXTRA_ARGS =
 
 
@@ -291,10 +291,9 @@ MPOLLUTE =
 # LinuxGpib might depend on some other libraries:
 # See ExtUtils::Liblist for details
 #
-EXTRALIBS = -L/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user-4.3.6/lib/.libs -lgpib
-LDLOADLIBS = -L/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user-4.3.6/lib/.libs -lgpib -lpthread
+EXTRALIBS = 
+LDLOADLIBS = -lpthread
 BSLOADLIBS = 
-LD_RUN_PATH = /tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user-4.3.6/lib/.libs
 
 
 # --- MakeMaker const_cccmd section:
@@ -476,7 +475,7 @@ INST_DYNAMIC_FIX =
 
 $(INST_DYNAMIC) : $(OBJECT) $(MYEXTLIB) $(INST_ARCHAUTODIR)$(DFSEP).exists $(EXPORT_LIST) $(PERL_ARCHIVEDEP) $(PERL_ARCHIVE_AFTER) $(INST_DYNAMIC_DEP) 
 	$(RM_F) $@
-	LD_RUN_PATH="$(LD_RUN_PATH)" $(LD)  $(LDDLFLAGS)  $(LDFROM) $(OTHERLDFLAGS) -o $@ $(MYEXTLIB) \
+	$(LD)  $(LDDLFLAGS)  $(LDFROM) $(OTHERLDFLAGS) -o $@ $(MYEXTLIB) \
 	  $(PERL_ARCHIVE) $(LDLOADLIBS) $(PERL_ARCHIVE_AFTER) $(EXPORT_LIST) \
 	  $(INST_DYNAMIC_FIX)
 	$(CHMOD) $(PERM_RWX) $@
@@ -1005,10 +1004,10 @@ testdb_dynamic :: dynamic pure_all
 subdirs-test_static :: static pure_all
 
 test_static :: subdirs-test_static $(MAP_TARGET)
-	PERL_DL_NONLAZY=1 "/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user-4.3.6/language/perl/$(MAP_TARGET)" $(MAP_PERLINC) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
+	PERL_DL_NONLAZY=1 "/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user/language/perl/$(MAP_TARGET)" $(MAP_PERLINC) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
 
 testdb_static :: static pure_all $(MAP_TARGET)
-	PERL_DL_NONLAZY=1 "/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user-4.3.6/language/perl/$(MAP_TARGET)" $(MAP_PERLINC) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
+	PERL_DL_NONLAZY=1 "/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-user/language/perl/$(MAP_TARGET)" $(MAP_PERLINC) "-I$(INST_LIB)" "-I$(INST_ARCHLIB)" $(TEST_FILE)
 
 
 

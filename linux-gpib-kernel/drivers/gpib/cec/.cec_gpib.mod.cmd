@@ -1,1 +1,0 @@
-cmd_/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/cec/cec_gpib.mod := printf '%s\n'   init.o interrupt.o | awk '!x[$$0]++ { print("/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/cec/"$$0) }' > /tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/cec/cec_gpib.mod
