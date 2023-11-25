@@ -1,0 +1,1 @@
+cmd_/tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/agilent_82350b/modules.order := {   echo /tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/agilent_82350b/agilent_82350b.o; :; } > /tmp/tmp.HYKi7kwhC2/linux-gpib-4.3.6/linux-gpib-kernel-4.3.6/drivers/gpib/agilent_82350b/modules.order
